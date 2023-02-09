@@ -2,7 +2,7 @@ node{
 
     stage('SCM Checkout')
     {
-        git credentialsId: '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', url: 'https://github.com/VardhanNS/phpmysql-app.git'
+        git credentialsId: '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', url: 'https://github.com/affuaqqi123/E-Commerce-Application.git'
     }
     
     stage('Run Docker Compose File')
@@ -10,7 +10,7 @@ node{
         sh 'sudo docker-compose build'
         sh 'sudo docker-compose up -d'
     }
-  stage('PUSH image to Docker Hub')
+ /* stage('PUSH image to Docker Hub')
     {
       /* withCredentials([string(credentialsId: 'DockerHubPassword', variable: 'DHPWD')]) 
         {
@@ -27,4 +27,5 @@ node{
             // sh 'docker push upasanatestdocker/mysql'
           
     }
+}*/
 }
