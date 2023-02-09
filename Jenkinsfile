@@ -12,12 +12,12 @@ node{
     }
  /* stage('PUSH image to Docker Hub')
     {
-      /* withCredentials([string(credentialsId: 'DockerHubPassword', variable: 'DHPWD')]) 
+       withCredentials([string(credentialsId: 'DockerHubPassword', variable: 'DHPWD')]) 
         {
             sh "docker login -u upasanatestdocker -p ${DHPWD}"
         }
         sh 'docker push vardhanns/phpmysql_app'
-        */
+        
         //docker.withRegistry( 'https://registry.hub.docker.com', 'DockerHubPassword' ) {
              
              sh 'sudo docker login -u "upasanatestdocker" -p "Zephyr@17" docker.io'
